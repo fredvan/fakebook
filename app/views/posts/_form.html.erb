@@ -1,9 +1,7 @@
-
-
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(@post.errors.count, "erro impediu", "erros impediram") %> esse post de ser salvo:</h2>
 
       <ul>
       <% @post.errors.full_messages.each do |msg| %>
@@ -17,7 +15,7 @@
     <span class="item-image-wrap"><img width="50" height="50" src="/assets/user-chuck.jpg" /></span>
   </div>
 
-  <div class="comment-textearea">
+  <div class="comment-textarea">
     <%= f.text_area :body, placeholder: 'Adicione um comentário...' %>
   </div>
 
@@ -29,6 +27,4 @@
       <%= f.submit 'Postar', class: 'button tiny' %>
     </div>
   </div>
-
-
 <% end %>
