@@ -12,6 +12,11 @@ Fakebook::Application.routes.draw do
 
   get "home/index"
 
+  get 'equipe(/:nome(/:idade))' => 'frontend#equipe'
+
+  get 'contato' => 'frontend#contato'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
